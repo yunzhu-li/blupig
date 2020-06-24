@@ -16,7 +16,9 @@ Currently runs single-threaded, supports only `Gomoku` rules, future plans:
 - MCTS with parallelization
 - Self-learning
 
-A live demo is hosted on: https://apps.yunzhu.li/gomoku
+A live demo is hosted on:
+
+[![Run on Ainize](https://ainize.ai/static/images/run_on_ainize_button.svg)](https://gomoku-yhm7035.endpoint.ainize.ai/)
 
 ![Alt text](gui/screenshots/00.png?raw=true "Screenshot")
 
@@ -30,7 +32,13 @@ This application is available as a docker image `yunzhu/blupig-gomoku`.
   ```
   docker run -d --rm -p 8000:8000 -e SERVER_URI="http://<server-ip>:8000" yunzhu/gomoku
   ```
+  Access `http://<server-ip>:8000` in your browser.
 
-- Access `http://<server-ip>:8000` in your browser.
+  or
+  ```
+  docker build -t gomoku .
+  docker run -d --rm -p 8000:8000" gomoku
+  ```
+  Access `http://127.0.0.1:8000` in your browser.
 
 - Play!
